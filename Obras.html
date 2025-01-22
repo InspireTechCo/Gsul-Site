@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesul Construção</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos customizados */
+        .hero-section {
+            background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), url('ADICIONAR_IMAGEM_HERO');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-height {
+            min-height: 400px;
+        }
+
+        /* Animações */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Responsividade para imagens */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" >
+    
+     <!-- Header Fixo -->
+     <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html.html">
+                <img src="Logo/Untitled-8.png" alt="Logo Gesul" class="w-20 md:w-32">
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html.html" class="text-black-700 hover:text-orange-500">Home</a>
+                <a href="sobre-2.html" class="text-black-700 hover:text-orange-500">Sobre</a>
+                <a href="#obras" class="text-black-700 hover:text-orange-500">Obras</a>
+                <a href="#contato" class="text-black-700 hover:text-orange-500">Contato</a>
+            </div>
+            
+            <!-- Menu Hamburguer para dispositivos móveis -->
+            <div class="md:hidden">
+                <button id="hamburger" class="text-black focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section-height pt-0">
+            <div class="container mx-auto px-0 lg:px-0 max-w-full h-full flex flex-wrap items-center max-w-screen-xl" 
+                style="
+                    background-image: url('Fotos projetos/Loja-sombra-2.png'); 
+                    background-size: contain; 
+                    background-position: center; 
+                    background-repeat: no-repeat; 
+                    color: white;
+                    min-height: 800px; /* Ajuste o tamanho mínimo do contêiner, se necessário */
+                ">
+                
+                <!-- Lado esquerdo - Compromisso com a Qualidade -->
+                <div class="w-full md:w-2/3 mb-12 md:mb-0 px-10">
+                    <h1 class="text-2xl md:text-5xl font-bold mb-1" >
+                        Nossos Projetos
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8">
+                        Com anos de experiência, entregamos projetos que transformam ideias em realidades concretas. Desde ambientes corporativos a obras industriais de grande porte, nosso compromisso é com a excelência, inovação e sustentabilidade. Explore nossos projetos que fazem a diferença no mercado.
+                    </p>                
+                </div>
+            </div>
+             <!-- Projetos -->
+        <section id="projetos" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 text-center">Nossos Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card Projeto 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                        <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                        <img src="Fotos projetos/Casa alta.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Construção casa Alta</h3>
+                            <p class="text-gray-600 mb-4">Parceria com a construtora Casa Alta em Ponta Grossa/Pr para entrega do condomínio Residencial Campo Alegre, com 10.800 m² de drywall e 1.400 m² de forro PVC, aseegurando qualidade e eficiência no projeto.</p>
+                            <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                                Saiba mais
+                            </button>
+                            
+                        </div>
+                    </div>
+                    <!-- Card projeto 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                        <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                        <img src="Fotos projetos/reforma comercial.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Reforma Comercial</h3>
+                            <p class="text-gray-600 mb-4">Transformação completa com revitalização da fachada, instalação de pergolado e desgin funcional no interior, com iluminação embutida e acabamentos sofisticados, unindo estética e funcionalidade.</p>
+                            <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                                Saiba mais
+                            </button>
+                            
+                        </div>
+                    </div>
+                    <!-- Card projeto 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                        <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                        <img src="Fotos projetos/steel frame.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Projeto com Steel Frame</h3>
+                            <p class="text-gray-600 mb-4">Estruturamento moderna e eficiente construída com Stell Frame, garantindo rapidez, sustentabilidade e alta precisão, com redução de resíduos e economia no prazo de execução</p>
+                            <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                                Saiba mais
+                            </button>
+                            
+                        </div>
+                    <!-- Repetir estrutura para outros projetos -->
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card Projeto 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                    <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                    <img src="Fotos projetos/Casa alta.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Construção casa Alta</h3>
+                        <p class="text-gray-600 mb-4">Parceria com a construtora Casa Alta em Ponta Grossa/Pr para entrega do condomínio Residencial Campo Alegre, com 10.800 m² de drywall e 1.400 m² de forro PVC, aseegurando qualidade e eficiência no projeto.</p>
+                        <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                            Saiba mais
+                        </button>
+                        
+                    </div>
+                </div>
+                <!-- Card projeto 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                    <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                    <img src="Fotos projetos/reforma comercial.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Reforma Comercial</h3>
+                        <p class="text-gray-600 mb-4">Transformação completa com revitalização da fachada, instalação de pergolado e desgin funcional no interior, com iluminação embutida e acabamentos sofisticados, unindo estética e funcionalidade.</p>
+                        <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                            Saiba mais
+                        </button>
+                        
+                    </div>
+                </div>
+                <!-- Card projeto 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                    <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                    <img src="Fotos projetos/steel frame.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Projeto com Steel Frame</h3>
+                        <p class="text-gray-600 mb-4">Estruturamento moderna e eficiente construída com Stell Frame, garantindo rapidez, sustentabilidade e alta precisão, com redução de resíduos e economia no prazo de execução</p>
+                        <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                            Saiba mais
+                        </button>
+                        
+                    </div>
+                    
+        </section>

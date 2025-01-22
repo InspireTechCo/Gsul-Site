@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesul Construção</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos customizados */
+        .hero-section {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('ADICIONAR_IMAGEM_HERO');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-height {
+            min-height: 400px;
+        }
+
+        /* Animações */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Responsividade para imagens */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" >
+    
+    <!-- Header Fixo -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html.html">
+                <img src="Logo/Untitled-8.png" alt="Logo Gesul" class="w-20 md:w-32">
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html.html" class="text-black-700 hover:text-orange-500">Home</a>
+                <a href="sobre-2.html" class="text-black-700 hover:text-orange-500">Sobre</a>
+                <a href="#obras" class="text-black-700 hover:text-orange-500">Obras</a>
+                <a href="#contato" class="text-black-700 hover:text-orange-500">Contato</a>
+            </div>
+            
+            <!-- Menu Hamburguer para dispositivos móveis -->
+            <div class="md:hidden">
+                <button id="hamburger" class="text-black focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section-height pt-20">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-0 xl:px-0 max-w-screen-2x1 h-full flex flex-wrap items-center max-w-screen-x1" 
+            style=
+            "
+            background-image: url('Fotos projetos/Foto\ home_upscayl_1x_upscayl-standard-4x.png'); 
+            background-size: cover; 
+            background-position: left; 
+            background-repeat: no-repeat; 
+            color: white;
+            min-height: 400px; /* Ajuste o tamanho mínimo do contêiner, se necessário */
+        ">
+                
+                <!-- Lado esquerdo - Compromisso com a Qualidade -->
+                <div class="w-full md:w-2/3 mb-8 md:mb-0 px-25">
+                    <h1 class="text-2xl md:text-5xl font-bold mb-4" style="color: white;">
+                        Compromisso com a Qualidade e Inovação.
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8" style="color: white;">
+                        Transformamos ideias em grandes realizações, entregando projetos que unem eficiência,
+                        excelência técnica e soluções inovadoras para atender às demandas mais desafiadoras.
+                    </p>
+                    <!-- Botão para Nossos Projetos -->
+                    <a href="#projetos">
+                     <button class="bg-[#FFA500] text-[#FFFFFF] px-10 py-3 rounded-md hover:bg-[#FF8C00] transition duration-300 transform hover:scale-110" style="background-color: #fe9b00; color: #FFFFFF;">
+                      NOSSOS PROJETOS
+                        </button>
+                    </a>               
+                </div>
+        
+                <!-- Lado direito - Nossos Serviços -->
+                <div class="w-full md:w-1/3 bg-[#FFA500] py-8 px-6" style="background-color: #fe9b00;">
+                    <h2 class="text-4xl font-bold mb-4 text-center" style="color: #232b38;">Nossos Serviços</h2>
+                    <div class="space-y-4">
+                        <!-- Card Serviço 1 - Corporativos -->
+                        <div class="bg-[#FFA500] p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105 flex items-center">
+                            <img src="Icon/empresarial.png" alt="Corporativo" class="w-12 h-12 mr-4">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #232b38;">Corporativos</h3>
+                                <p style="color: #ffffff;">Projetos arquitetônicos e funcionais que otimizam espaços empresariais e impulsionam negócios.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Card Serviço 2 - Industriais -->
+                        <div class="bg-[#FFA500] p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105 flex items-center">
+                            <img src="Icon/Fabrica.png" alt="Industrial" class="w-12 h-12 mr-4">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #232b38;">Industriais</h3>
+                                <p style="color: #ffffff;">Especializados em obras industriais de grande porte, entregamos soluções completas para o setor produtivo.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Card Serviço 3 - Infraestrutura -->
+                        <div class="bg-[#FFA500] p-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105 flex items-center">
+                            <img src="Icon/b2b.png" alt="Infraestrutura" class="w-12 h-12 mr-4">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2" style="color: #232b38;">Infraestrutura</h3>
+                                <p style="color: #ffffff;">Contribuímos para o desenvolvimento urbano com projetos sustentáveis e eficientes para comunidades e instituições.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .hero-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 30vh;
+                width: 100%;
+            }
+            @media (min-width: 1024px) {
+                .hero-section {
+                    padding-left: 0rem;
+                    padding-right: 0rem;
+                }
+            }
+            /* Ajustando o background-size da imagem para diferentes tamanhos de tela */
+            @media (max-width: 768px) {
+                .hero-section {
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        </style>
+
+<section id="Angelina Caron" class="py-8 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-10 text-center">Projeto no Hospital Angelina Caron</h2>
+      <div class="flex flex-wrap md:flex-nowrap items-start">
+        <!-- Imagem -->
+        <div class="w-full md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
+          <img src="Fotos projetos/R_upscayl_4x_upscayl-standard-4x.png" alt="Angelina Caron" class="max-w-full h-auto">
+        </div>
+        <!-- Texto e caixas -->
+        <div class="w-full md:w-1/2 px-4 sm:px-6 md:px-10">
+          <div class="space-y-4 mb-6">
+            <p>
+              Com mais de 7 anos de parceria, a Gsul entregou soluções inovadoras e de alta qualidade para o Hospital Angelina Caron, localizado em Campina Grande do Sul/PR.
+            </p>
+            <p>
+              Nosso trabalho inclui a instalação de 1.430 m² de paredes em drywall e 9.800 m² de forro drywall F-530, contribuindo para a modernização e funcionalidade dos espaços internos.
+            </p>
+            <p>
+              Nossos serviços foram realizados com foco em eficiência, segurança e cumprimento das normas regulamentadoras da construção civil, garantindo um ambiente adequado às necessidades da instituição de saúde e de seus pacientes.
+            </p>
+          </div>
+          <!-- Botão centralizado -->
+          <div class="text-center mb-10">
+            <a href="#saiba-mais" 
+               class="inline-block font-bold py-2 px-4 border rounded transition"
+               style="color: #232b38; border-color: #232b38; background-color: transparent; text-align: center;"
+               onmouseover="this.style.backgroundColor='#232b38'; this.style.color='#FFFFFF';"
+               onmouseout="this.style.backgroundColor='transparent'; this.style.color='#232b38';">
+              Saiba Mais
+            </a>
+          </div>
+          <!-- Caixas com animação -->
+          <div class="flex flex-wrap gap-4">
+            <div class="flex-1 p-6 rounded shadow text-center" style="background-color: #FE9B00;">
+              <h3 class="text-4xl font-bold" id="counter1" style="color: #232b38;">0</h3>
+              <p class="mt-1" style="color: #232b38;">Paredes de Drywall (m²)</p>
+            </div>
+            <div class="flex-1 p-6 rounded shadow text-center" style="background-color: #232b38;">
+              <h3 class="text-4xl font-bold" id="counter2" style="color: #FFFFFF;">0</h3>
+              <p class="mt-2" style="color: #FFFFFF;">Forro Drywall F-530 (m²)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Função para animação de contagem
+    function animateCounter(id, target, duration) {
+      const element = document.getElementById(id);
+      let start = 0;
+      const increment = target / (duration / 16); // Incremento baseado no tempo de frame (~16ms)
+      const interval = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          start = target;
+          clearInterval(interval);
+        }
+        element.textContent = Math.floor(start);
+      }, 16);
+    }
+  
+    // Iniciar animação ao carregar a página
+    window.addEventListener("DOMContentLoaded", () => {
+      animateCounter("counter1", 1430, 2000); // Contagem para 1.430 m²
+      animateCounter("counter2", 9800, 2000); // Contagem para 9.800 m²
+    });
+  </script>
+  
+  
+          
+          
+        <!-- Projetos -->
+        <section id="projetos" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 text-center">Nossos Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card Projeto 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                        <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                        <img src="Fotos projetos/Casa alta.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Construção casa Alta</h3>
+                            <p class="text-gray-600 mb-4">Parceria com a construtora Casa Alta em Ponta Grossa/Pr para entrega do condomínio Residencial Campo Alegre, com 10.800 m² de drywall e 1.400 m² de forro PVC, aseegurando qualidade e eficiência no projeto.</p>
+                            <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                                Ver projeto
+                            </button>
+                            
+                        </div>
+                    </div>
+                    <!-- Card projeto 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                        <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                        <img src="Fotos projetos/reforma comercial.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Reforma Comercial</h3>
+                            <p class="text-gray-600 mb-4">Transformação completa com revitalização da fachada, instalação de pergolado e desgin funcional no interior, com iluminação embutida e acabamentos sofisticados, unindo estética e funcionalidade.</p>
+                            <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                                Ver projeto
+                            </button>
+                            
+                        </div>
+                    </div>
+                    <!-- Card projeto 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                        <!-- ADICIONAR_IMAGEM: src="/images/projects/project1.jpg" -->
+                        <img src="Fotos projetos/steel frame.jpg" alt="Projeto 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Projeto com Steel Frame</h3>
+                            <p class="text-gray-600 mb-4">Estruturamento moderna e eficiente construída com Stell Frame, garantindo rapidez, sustentabilidade e alta precisão, com redução de resíduos e economia no prazo de execução</p>
+                            <button style="color: #000000; border: 2px solid #232b38; padding: 10px 20px; background-color: transparent; font-size: 16px; border-radius: 5px; transition: all 0.3s ease;" onmouseover="this.style.color='#FF8C00'" onmouseout="this.style.color='#232b38'">
+                                Ver projeto
+                            </button>
+                            
+                        </div>
+                    <!-- Repetir estrutura para outros projetos -->
+                </div>
+            </div>
+        </section>
+
+     <!-- Sobre Nós -->
+<section id="sobre" class="py-16" style="background-color: #232b38;">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Imagem -->
+            <div class="order-1 md:order-2">
+                <img src="Fotos projetos/Foto home.png" alt="Sobre Gesul" class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+
+            <!-- Texto -->
+            <div class="order-2 md:order-1">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: #FFFFFF;">Quem somos?</h2>
+                <p class="text-gray-600 mb-4" style="color: #ffffff;">
+                    A Gsul Construtora nasceu em 2020 com o objetivo de suprir a carência de mão de obra qualificada e profissionalismo no munício de Campina Grande do Sul, onde foi fundada, sua sede onde está localizada nessa região.
+                </p>
+                <p class="mb-4" style="color: #FFFFFF;">
+                    Atuando em diversas cidades do estado do Paraná, nossas principais atividades incluem o gerenciamento de obras residenciais, industriais, comerciais e públicas, elaboração de projetos arquitetônicos e de interiores, o fornecimento de mão de obra especializada, a elaboração de detalhamento técnicos, ações de voluntariado, entre outras.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                    <!-- Anos de Experiência -->
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">
+                        <span class="text-3xl font-bold" id="experience" style="color: #FFA500;">15</span>
+                        <p style="color: #232b38;">Anos de Experiência</p>
+                    </div>
+
+                    <!-- Obras Concluídas -->
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">
+                        <span class="text-3xl font-bold" id="projects" style="color: #FFA500;">+300.000m²</span>
+                        <p style="color: #606060;">Obras Concluídas</p>
+                    </div>
+
+                    <!-- Botão Saiba mais -->
+                    <div class="mt-6 text-center">
+                        <button
+                            style="background-color: #232b38; color: #FFFFFF; padding: 12px 24px; border-radius: 15px; border: 2px solid #FFA500; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Área de Atuação-->
+<div class="container mx-auto mt-8 px-4">
+    <!-- Área de Atuação -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Coluna da Área de Atuação -->
+        <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold" style="color: #232b38;">Área de Atuação</h2>
+            <p class="text-lg mt-4" style="color: #606060;">
+                A Gsul se posiciona no mercado com foco em atender os cliente B2B, oferecendo soluções robustas, personalizadas e alinhadas às necessidades do setor. Nossa missão é entregar projetos de grande porte com excelência, inovação e sustentabilidade.
+            </p>
+        </div>
+        <!-- Coluna de Perguntas Frequentes -->
+        <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold" style="color: #232b38;">Perguntas Frequentes</h2>
+            
+            <!-- FAQ 1 -->
+            <div class="mt-4">
+                <button class="text-left w-full font-bold text-lg" style="color: #FFA500;" onclick="toggleFAQ(1)">
+                    <span id="faq-icon-1">+</span> Quais são os principais serviços que vocês oferecem?
+                </button>
+                <div id="faq-answer-1" class="hidden mt-2 text-gray-600">
+                    <p>Oferecemos serviços de arquitetura para projetos corporativos, industriais e infraestrutura, buscando sempre soluções inovadoras e sustentáveis para nossos clientes.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="mt-4">
+                <button class="text-left w-full font-bold text-lg" style="color: #FFA500;" onclick="toggleFAQ(2)">
+                    <span id="faq-icon-2">+</span> Como posso obter um orçamento para meu projeto?
+                </button>
+                <div id="faq-answer-2" class="hidden mt-2 text-gray-600">
+                    <p>Você pode entrar em contato conosco pelo nosso formulário de contato ou pelo telefone. Após a análise do seu projeto, enviaremos um orçamento detalhado com as opções disponíveis.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="mt-4">
+                <button class="text-left w-full font-bold text-lg" style="color: #FFA500;" onclick="toggleFAQ(3)">
+                    <span id="faq-icon-3">+</span> Qual é o tempo estimado para a entrega de um projeto?
+                </button>
+                <div id="faq-answer-3" class="hidden mt-2 text-gray-600">
+                    <p>O tempo de entrega varia de acordo com o tipo de projeto. É preciso ser feita uma avaliação no projeto que deseja, para podermos dar uma previsão de entrega.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Função para mostrar/esconder as respostas das perguntas frequentes
+function toggleFAQ(faqId) {
+    const answer = document.getElementById(`faq-answer-${faqId}`);
+    const icon = document.getElementById(`faq-icon-${faqId}`);
+    
+    if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.textContent = '-';  // Troca o ícone para menos
+    } else {
+        answer.classList.add('hidden');
+        icon.textContent = '+';  // Troca o ícone para mais
+    }
+}
+</script>
+<!-- Clientes -->
+<section id="clientes" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-screen-xl">
+        <h2 class="text-4xl font-bold text-center mb-10" style="color: #232b38;">Nossos Clientes</h2>
+
+        <!-- Área de Clientes (Grid para Desktop, Slider para Mobile) -->
+        <div class="clientes-grid">
+            <!-- Cliente 1 -->
+            <div class="cliente-item">
+                <img src="Clientes/Tecnoflex2-removebg-preview.png" alt="Cliente 1" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 2 -->
+            <div class="cliente-item">
+                <img src="Clientes/Eternit.1.1-removebg-preview.png" alt="Cliente 2" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 3 -->
+            <div class="cliente-item">
+                <img src="Clientes/Copel2-removebg-preview.png" alt="Cliente 3" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 4 -->
+            <div class="cliente-item">
+                <img src="Clientes/Jasmine2-removebg-preview.png" alt="Cliente 4" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 5 -->
+            <div class="cliente-item">
+                <img src="Clientes/Barbieri-logo-removebg-preview.png" alt="Cliente 5" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 6 -->
+            <div class="cliente-item">
+                <img src="Clientes/Angelina-caron1-removebg-preview.png" alt="Cliente 6" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 7 -->
+            <div class="cliente-item">
+                <img src="Clientes/Isoletric1-removebg-preview.png" alt="Cliente 7" class="mx-auto h-20 w-auto">
+            </div>
+            <!-- Cliente 8 -->
+            <div class="cliente-item">
+                <img src="Clientes/vetore-removebg-preview.png" alt="Cliente 8" class="mx-auto h-20 w-auto">
+            </div>
+        </div>
+
+        <!-- Slider para Mobile -->
+        <div class="swiper-container clientes-slider">
+            <div class="swiper-wrapper">
+                <!-- Cliente 1 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Angelina-caron1-removebg-preview.png" alt="Cliente 1" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 2 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Eternit.1.1-removebg-preview.png" alt="Cliente 2" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 3 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Copel2-removebg-preview.png" alt="Cliente 3" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 4 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Jasmine2-removebg-preview.png" alt="Cliente 4" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 5 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Barbieri-logo-removebg-preview.png" alt="Cliente 5" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 6 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Isoletric1-removebg-preview.png" alt="Cliente 6" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 7 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/Tecnoflex2-removebg-preview.png" alt="Cliente 7" class="mx-auto h-20 w-auto">
+                </div>
+                <!-- Cliente 8 -->
+                <div class="swiper-slide">
+                    <img src="Clientes/vetore-removebg-preview.png" alt="Cliente 8" class="mx-auto h-20 w-auto">
+                </div>
+            </div>
+
+
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Swiper.js CDN -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<style>
+    /* Estilo geral */
+    .clientes-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .cliente-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .cliente-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Esconde o slider no desktop */
+    .clientes-slider {
+        display: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .clientes-grid {
+            display: none;
+        }
+
+        .clientes-slider {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    // Inicialização do Swiper.js com timer automático
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000, // 3 segundos
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+    });
+</script>
+
+
+
+        <!-- Contato -->
+        <section id="contato" class="py-0" style="background-color: #f5f5f5;">
+            <div class="container mx-auto max-w-7xl px-1">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                <!-- Coluna Esquerda (Fundo Laranja) -->
+                <div class=" items-center text-left p-10" style="background-color: #fe9b00; color: #FFFFFF;">
+                  <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+                  <ul class="space-y-6">
+                    <li class="flex items-center space-x-3">
+                      <span style="font-size: 20px;">📄</span>
+                      <a href="Solicitar-orçamento.html" style="color: #FFFFFF; text-decoration: none;">Solicitar Orçamento</a>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                      <span style="font-size: 20px;">🤝</span>
+                      <a href="Fornecedor.html" style="color: #FFFFFF; text-decoration: none;">Seja Nosso Fornecedor</a>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                      <span style="font-size: 20px;">💼</span>
+                      <a href="Trabalhe-conosco.html" style="color: #FFFFFF; text-decoration: none;">Trabalhe Conosco</a>
+                    </li>
+                  </ul>
+                </div>
+          
+                <!-- Coluna Direita (Informações de Contato) -->
+                <div class="p-8" style="background-color: #232b38; color: #FFFFFF;">
+                  <div class="mb-6">
+                    <h3 class="text-lg font-bold mb-2">Localização</h3>
+                    <p>
+                      Rua Presidente Juscelino Kubitschek de Oliveira, 806<br>
+                      Jardim Paulista, Campina Grande do Sul - PR<br>
+                      83430-000
+                    </p>
+                  </div>
+                  <div class="mb-6">
+                    <h3 class="text-lg font-bold mb-2">Telefone</h3>
+                    <p>
+                      <a href="tel:+554131581824" style="color: #FFFFFF; text-decoration: none;">41 3158-1824 | 41 99766-5019</a>
+                    </p>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold mb-2">Email</h3>
+                    <p>
+                      <a href="mailto:contato@gesuldistribuidora.com.br" style="color: #FFFFFF; text-decoration: none;">contato@gesuldistribuidora.com.br</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Footer -->
+<footer style="background-color: #232b38; color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="container mx-auto px-14 py-4 justify-between items-center">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <!-- ADICIONAR_LOGO: src="/images/logo-white.png" -->
+                <a href="index.html">
+                    <img src="Logo/1x/Asset 1.png" alt="Gesul Logo" class="h-8 mb-4">
+                </a>
+                <p style="color: #CBD5E0;">Transformando ideias em realidade desde 2010</p>
+            </div>
+            <div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Links Rápidos</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" style="color: #CBD5E0;">Home</a></li>
+                    <li><a href="sobre-2.html" style="color: #CBD5E0;">Sobre</a></li>
+                    <li><a href="#projetos" style="color: #CBD5E0;">Projetos</a></li>
+                    <li><a href="#contato" style="color: #CBD5E0;">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Serviços</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" style="color: #CBD5E0;">Construção Civil</a></li>
+                    <li><a href="#" style="color: #CBD5E0;">Projetos Industriais</a></li>
+                    <li><a href="#" style="color: #CBD5E0;">Infraestrutura</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Redes Sociais</h4>
+                <div class="flex space-x-4">
+                    <a href="https://web.facebook.com/gesulconstrucaoaseco" target="_blank" style="color: #CBD5E0;">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gesulconstrucaoaseco/" target="_blank" style="color: #CBD5E0;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" style="color: #CBD5E0;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #4A5568; margin-top: 2rem; padding-top: 2rem; text-align: center;">
+            <p style="color: #CBD5E0;">&copy; 2024 Gesul Construção. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Hover effects for links */
+    a:hover {
+        color: #FFFFFF !important;
+    }
+</style>
+
+<script>
+    // Script para mostrar/ocultar o menu mobile
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.md\\:flex');
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html>

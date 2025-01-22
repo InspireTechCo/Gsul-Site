@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesul Construção</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos customizados */
+        .hero-section {
+            background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), url('ADICIONAR_IMAGEM_HERO');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-height {
+            min-height: 400px;
+        }
+
+        /* Animações */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Responsividade para imagens */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" >
+    
+    <!-- Header Fixo -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html.html">
+                <img src="Logo/Untitled-8.png" alt="Logo Gesul" class="w-20 md:w-32">
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html.html" class="text-black-700 hover:text-orange-500">Home</a>
+                <a href="sobre-2.html" class="text-black-700 hover:text-orange-500">Sobre</a>
+                <a href="#obras" class="text-black-700 hover:text-orange-500">Obras</a>
+                <a href="#contato" class="text-black-700 hover:text-orange-500">Contato</a>
+            </div>
+            
+            <!-- Menu Hamburguer para dispositivos móveis -->
+            <div class="md:hidden">
+                <button id="hamburger" class="text-black focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+  <section id="home" class="hero-section section-height pt-0">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full max-w-screen-xl relative"
+    style="
+        background-image: url('Fotos projetos/Loja-sombra-2.png');
+        background-size: cover; /* Preenche todo o espaço da seção */
+        background-position: 72% 20%; /* Ajuste preciso (horizontal% vertical%) */
+        background-repeat: no-repeat; 
+        color: white;
+        width: 100%;
+        height: 100%;
+        min-height: 800px;
+    ">
+
+        <!-- Gradiente para contraste do texto -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+        <!-- Conteúdo -->
+        <div class="relative z-10 w-full md:w-2/3 px-10 sm:px-10 lg:px-10 text-center md:text-left">
+            <h1 class="text-3xl sm:text-2xl md:text-5xl font-bold mb-4">
+                Fornecedores
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl leading-relaxed mb-8">
+                Preencha o formulário e em breve estaremos em contato para responder sua proposta.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Ajustes para telas menores */
+    @media (max-width: 768px) {
+        #home .container {
+            min-height: 400px; /* Altura menor para tablets e celulares */
+        }
+
+        #home h1 {
+            font-size: 2rem; /* Tamanho ajustado do título */
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        #home p {
+            font-size: 1rem; /* Texto menor */
+            line-height: 1.6;
+            margin: 0 16px; /* Margens laterais para evitar texto colado nas bordas */
+        }
+    }
+
+    @media (max-width: 480px) {
+        #home .container {
+            min-height: 400px; /* Altura reduzida para smartphones */
+            padding: 20px;
+        }
+
+        #home h1 {
+            font-size: 1.75rem; /* Título ainda menor para smartphones */
+            margin-bottom: 12px;
+        }
+
+        #home p {
+            font-size: 0.9rem; /* Texto reduzido */
+            line-height: 1.5;
+            margin: 0 12px;
+        }
+    }
+</style>
+       <!-- Formulário Trabalhe Conosco -->
+<section id="trabalhe-conosco" class="py-16 bg-gradient-to-br from-[#f5f5f5] to-[#e5e5e5]">
+    <div class="container mx-auto px-6 max-w-5xl">
+        <h2 class="text-4xl font-bold text-center text-[#333333] mb-12">Trabalhe Conosco</h2>
+        <!-- Aqui está a ação do formulário apontando para o PHP -->
+        <form action="processa_formulario.php" method="POST" enctype="multipart/form-data" class="bg-[#ffffff] shadow-lg rounded-lg p-8 lg:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Nome Completo -->
+                <div>
+                    <label for="nome" class="block text-sm font-semibold text-[#555555]">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required 
+                           class="mt-2 w-full px-4 py-3 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#ff7d00] focus:outline-none">
+                </div>
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-semibold text-[#555555]">Email</label>
+                    <input type="email" id="email" name="email" required 
+                           class="mt-2 w-full px-4 py-3 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#ff7d00] focus:outline-none">
+                </div>
+                <!-- Telefone -->
+                <div>
+                    <label for="telefone" class="block text-sm font-semibold text-[#555555]">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required 
+                           class="mt-2 w-full px-4 py-3 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#ff7d00] focus:outline-none">
+                </div>
+                <!-- Cargo de Interesse -->
+                <div>
+                    <label for="cargo" class="block text-sm font-semibold text-[#555555]">Cargo de Interesse</label>
+                    <input type="text" id="cargo" name="cargo" required 
+                           class="mt-2 w-full px-4 py-3 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#ff7d00] focus:outline-none">
+                </div>
+            </div>
+            <!-- Mensagem -->
+            <div class="mt-6">
+                <label for="mensagem" class="block text-sm font-semibold text-[#555555]">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" 
+                          class="mt-2 w-full px-4 py-3 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#ff7d00] focus:outline-none"></textarea>
+            </div>
+            <!-- Anexo -->
+            <div class="mt-6">
+                <label for="curriculo" class="block text-sm font-semibold text-[#555555]">Anexe seu Currículo (PDF)</label>
+                <input type="file" id="curriculo" name="curriculo" accept=".pdf" required 
+                       class="mt-2 w-full px-4 py-3 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#ff7d00] focus:outline-none">
+            </div>
+            <!-- Botão -->
+            <div class="mt-8 text-center">
+                <button type="submit" 
+                        class="bg-[#ff7d00] text-[#ffffff] font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#e66d00] focus:ring-2 focus:ring-[#ff9d4d] focus:outline-none transition duration-300">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+ <!-- Contato -->
+ <section id="contato" class="py-0" style="background-color: #f5f5f5;">
+    <div class="container mx-auto max-w-7xl px-1">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <!-- Coluna Esquerda (Fundo Laranja) -->
+        <div class=" items-center text-left p-10" style="background-color: #fe9b00; color: #FFFFFF;">
+          <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+          <ul class="space-y-6">
+            <li class="flex items-center space-x-3">
+              <span style="font-size: 20px;">📄</span>
+              <a href="Solicitar-orçamento.html" style="color: #FFFFFF; text-decoration: none;">Solicitar Orçamento</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span style="font-size: 20px;">🤝</span>
+              <a href="Fornecedor.html" style="color: #FFFFFF; text-decoration: none;">Seja Nosso Fornecedor</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span style="font-size: 20px;">💼</span>
+              <a href="Trabalhe-conosco.html" style="color: #FFFFFF; text-decoration: none;">Trabalhe Conosco</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Coluna Direita (Informações de Contato) -->
+        <div class="p-8" style="background-color: #232b38; color: #FFFFFF;">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold mb-2">Localização</h3>
+            <p>
+              Rua Presidente Juscelino Kubitschek de Oliveira, 806<br>
+              Jardim Paulista, Campina Grande do Sul - PR<br>
+              83430-000
+            </p>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-lg font-bold mb-2">Telefone</h3>
+            <p>
+              <a href="tel:+554131581824" style="color: #FFFFFF; text-decoration: none;">41 3158-1824 | 41 99766-5019</a>
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-2">Email</h3>
+            <p>
+              <a href="mailto:contato@gesuldistribuidora.com.br" style="color: #FFFFFF; text-decoration: none;">contato@gesuldistribuidora.com.br</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer style="background-color: #232b38; color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="container mx-auto px-14 py-4 justify-between items-center">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <!-- ADICIONAR_LOGO: src="/images/logo-white.png" -->
+                <a href="index.html">
+                    <img src="Logo/1x/Asset 1.png" alt="Gesul Logo" class="h-8 mb-4">
+                </a>
+                <p style="color: #CBD5E0;">Transformando ideias em realidade desde 2010</p>
+            </div>
+            <div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Links Rápidos</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" style="color: #CBD5E0;">Home</a></li>
+                    <li><a href="sobre-2.html" style="color: #CBD5E0;">Sobre</a></li>
+                    <li><a href="#projetos" style="color: #CBD5E0;">Projetos</a></li>
+                    <li><a href="#contato" style="color: #CBD5E0;">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Serviços</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" style="color: #CBD5E0;">Construção Civil</a></li>
+                    <li><a href="#" style="color: #CBD5E0;">Projetos Industriais</a></li>
+                    <li><a href="#" style="color: #CBD5E0;">Infraestrutura</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Redes Sociais</h4>
+                <div class="flex space-x-4">
+                    <a href="https://web.facebook.com/gesulconstrucaoaseco" target="_blank" style="color: #CBD5E0;">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gesulconstrucaoaseco/" target="_blank" style="color: #CBD5E0;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" style="color: #CBD5E0;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #4A5568; margin-top: 2rem; padding-top: 2rem; text-align: center;">
+            <p style="color: #CBD5E0;">&copy; 2024 Gesul Construção. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Hover effects for links */
+    a:hover {
+        color: #FFFFFF !important;
+    }
+</style>
+
+<script>
+    // Script para mostrar/ocultar o menu mobile
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.md\\:flex');
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+<!-- Font Awesome para ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html>
