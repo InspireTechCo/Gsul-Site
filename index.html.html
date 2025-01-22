@@ -32,8 +32,8 @@
 </head>
 <body class="bg-gray-50" >
     
-   <!-- Header Fixo -->
-   <header class="bg-white shadow-sm fixed w-full z-50">
+  <!-- Header Fixo -->
+  <header class="bg-white shadow-sm fixed w-full z-50">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="index.html.html">
             <img src="Logo/Untitled-8.png" alt="Logo Gesul" class="w-20 md:w-32">
@@ -56,6 +56,7 @@
         </div>
     </nav>
 </header>
+
     <!-- Home Page -->
     <main>
         <!-- Hero Section -->
@@ -451,9 +452,6 @@ function toggleFAQ(faqId) {
                     <img src="Clientes/vetore-removebg-preview.png" alt="Cliente 8" class="mx-auto h-20 w-auto">
                 </div>
             </div>
-
-
-            <!-- Paginação -->
             <div class="swiper-pagination"></div>
         </div>
     </div>
@@ -464,12 +462,19 @@ function toggleFAQ(faqId) {
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <style>
-    /* Estilo geral */
+    /* Evitar rolagem horizontal */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Grid responsivo */
     .clientes-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 2rem;
         justify-items: center;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .cliente-item img {
@@ -482,7 +487,7 @@ function toggleFAQ(faqId) {
         transform: scale(1.1);
     }
 
-    /* Esconde o slider no desktop */
+    /* Ocultar o slider no desktop */
     .clientes-slider {
         display: none;
     }
@@ -500,32 +505,21 @@ function toggleFAQ(faqId) {
 </style>
 
 <script>
-    // Inicialização do Swiper.js com timer automático
+    // Inicialização do Swiper.js
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
         autoplay: {
-            delay: 3000, // 3 segundos
+            delay: 3000,
             disableOnInteraction: false,
         },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-        },
     });
 </script>
-
 
 
         <!-- Contato -->
